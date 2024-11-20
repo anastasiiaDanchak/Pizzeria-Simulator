@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<HBox fx:id="orderItem" prefHeight="50.0" prefWidth="320.0" stylesheets="@../styles/styles.css" styleClass="clientRow" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx" fx:controller="org.example.cppprojectui.controllers.OrderItemController">
+    <children>
+        <Text fx:id="orderText" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="255.0">
+            <font>
+                <Font size="30.0" />
+            </font>
+            <HBox.margin>
+                <Insets left="15.0" top="5.0" />
+            </HBox.margin>
+        </Text>
+        <Button fx:id="detailsButton" mnemonicParsing="false" styleClass="buttonInClientRow" text="+">
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </Button>
+    </children>
+</HBox>
