@@ -27,7 +27,7 @@ public class OrdersController implements OrderStateObserver {
     private Pane cashRegistersPane;
 
     private List<CashRegisterController> cashRegisterControllers = new ArrayList<>();
-    private Map<Integer, Integer> orderToCashRegisterMap = new HashMap<>();
+    private Map<Order, Integer> orderToCashRegisterMap = new HashMap<>();
 
     public void setCashRegistersAmount(int cashRegistersAmount) {
         addCashRegisters(cashRegistersAmount);
@@ -59,7 +59,7 @@ public class OrdersController implements OrderStateObserver {
         if (cashRegisterIndex < cashRegisterControllers.size()) {
             cashRegisterControllers.get(cashRegisterIndex).addOrder(order);
             order.setStateObserver(this);
-            orderToCashRegisterMap.put(order.getOrderNumber(), cashRegisterIndex);
+            orderToCashRegisterMap.put(order, cashRegisterIndex);
         } else {
             System.out.println("Invalid cash register index");
         }
@@ -76,10 +76,10 @@ public class OrdersController implements OrderStateObserver {
     @Override
     public void onStateChanged(Order order, OrderState newState) {
         if (newState == OrderState.Done) {
-                Integer cashRegisterIndex = orderToCashRegisterMap.get(order.getOrderNumber());
+                Integer cashRegisterIndex = orderToCashRegisterMap.get(order);
                 if (cashRegisterIndex != null) {
                     deleteOrderfromCashRegister(cashRegisterIndex, order);
-                    orderToCashRegisterMap.remove(order.getOrderNumber());
+                    orderToCashRegisterMap.remove(order);
                     System.out.println(orderToCashRegisterMap);
                     order.removeStateObserver();
                 } else {
