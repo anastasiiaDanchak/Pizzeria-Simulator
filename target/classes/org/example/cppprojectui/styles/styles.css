@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+
+.image-view {
+    -fx-background-color: #0e0b0b;;
+    -fx-padding: 5px; /* Внутрішні відступи для картинки */
+    -fx-border-color: #2d4739; /* Колір рамки */
+    -fx-border-width: 1px; /* Ширина рамки */
+    -fx-background-insets: 5; /* Відстань фону від країв */
+}
+.pizza-type-background{
+    -fx-background-color: #FFF1F1;
+    -fx-padding: 5px;
+    -fx-border-color: #E78989;
+    -fx-font-size: 14px;
+}
+.custom-checkbox {
+    -fx-font-size: 12px;
+    -fx-font-family: "Karla";
+}
+
+.custom-checkbox:hover {
+    -fx-background-color: #E78989;
+}
+.custom-checkbox .box {
+    -fx-background-color: #D9D9D9;
+;
+    -fx-pref-height: 20;
+    -fx-pref-width: 20;
+}
+
+.arrow-button {
+    -fx-background-color: #C8C2C2;
+    -fx-border-width: 0;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.arrow-button:hover {
+    -fx-background-color: #ada8a8;
+}
+.arrow-button:pressed {
+    -fx-background-color: #c0c0c0;
+}
+
+.label-settings{
+    -fx-font-family: 'Kavoon';
+    -fx-text-fill: #2d653d;
+}
+
+.label-simulation-settings{
+    -fx-background-color: #a4a696;
+    -fx-font-family: 'Kavoon';
+    -fx-font-size: 30px;
+    -fx-text-fill: #FFFFFF;
+}
+.bg-simulation-settings{
+    -fx-background-color: #f0d1d0;
+    -fx-background-radius: 10px;
+}.buttonInMenu {
+    -fx-background-color: #FFAAAA;
+    -fx-text-fill: black;
+    -fx-font-family: 'Courier New';
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.buttonInMenu:pressed{
+    -fx-background-color: #FF7777;
+}
+
+.rounded_bg {
+    -fx-background-color: #C96868;
+    -fx-text-fill: #f2f2f2;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+}
+
+.text-container{
+    -fx-background-color: #C96868;
+    -fx-text-fill: #f2f2f2;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 20px;
+}
+
+.custom-text{
+    -fx-fill: #f2f2f2;
+    -fx-font-family: 'Courier New';
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+}
+
+.anchor-pane {
+    -fx-background-color: #f2f2f2; /* Світло-сірий фон */
+}
+
+/* стилі для таблички кухарів */
+
+.table-view {
+    -fx-background-color: #fff;
+    -fx-font-family: sans-serif; /* Шрифт Sans-Serif */
+    -fx-font-size: 14px;
+}
+
+.table-view .column-header {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-padding: 15px; /* Відступи для заголовків */
+    -fx-text-fill: #000000; /* Чорний колір тексту заголовків */
+    -fx-font-weight: bold; /* Жирний текст для заголовків */
+    -fx-font-size: 25px;
+    -fx-background-color: #D76C82;
+}
+
+.table-cell {
+    -fx-background-color: #E4E0E1;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-padding: 15px; /* Відступи для кожної клітинки */
+    -fx-text-fill: #000000; /* Чорний текст в клітинках */
+    -fx-font-size: 25px;
+}
+
+/* стилі для таблички кухарів end */
+
+.buttonInClientRow{
+    -fx-pref-height: 50px;
+    -fx-pref-width: 50px;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-text-fill: black;
+    -fx-font-family: 'Courier New';
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-border-color: transparent transparent transparent black; /* лише лівий кордон чорного кольору */
+    -fx-border-width: 0 0 0 1px; /* товщина лівого кордону - 2px */
+}
+
+.buttonInClientRow:pressed{
+    -fx-background-color: #B7B7B7;
+}
+
+.clientRow{
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.configDoneBtn{
+    -fx-background-color: #a4a696;
+    -fx-text-fill: white;
+    -fx-border-color: grey;
+
+}

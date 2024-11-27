@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane fx:id="bgAnchorPane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.cppprojectui.controllers.ConfigController">
+    <!--    -->
+    <Pane layoutX="741.0" layoutY="298.0" prefHeight="483.0" prefWidth="437.0" styleClass="bg-simulation-settings">
+        <ImageView fitHeight="411.0" fitWidth="201.0" layoutX="244.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@drawable/pizza_config_image.png" />
+            </image>
+        </ImageView>
+
+        <!-- Header -->
+        <Label alignment="TOP_CENTER" contentDisplay="TEXT_ONLY" layoutY="45.0" prefHeight="72.0" prefWidth="437.0" styleClass="label-simulation-settings" text="Simulation settings" textAlignment="CENTER" />
+
+        <!-- Number of cash registers -->
+        <Label layoutX="29.0" layoutY="129.0" styleClass="label-settings" text="Number of cash registers" />
+        <ComboBox fx:id="registersComboBox" layoutX="29.0" layoutY="153.0" prefHeight="27.0" prefWidth="371.0" styleClass="pizza-type-background" />
+
+        <!-- Number of cooks -->
+        <Label layoutX="29.0" layoutY="200.0" styleClass="label-settings" text="Number of cooks" />
+        <ComboBox fx:id="cooksComboBox" layoutX="29.0" layoutY="222.0" prefHeight="27.0" prefWidth="371.0" styleClass="pizza-type-background" />
+
+        <!-- Cooking Time -->
+        <Label layoutX="29.0" layoutY="349.0" styleClass="label-settings" text="Min cooking time (minutes)" />
+        <TextField fx:id="cookingTimeField" layoutX="29.0" layoutY="374.0" prefHeight="27.0" prefWidth="371.0" styleClass="pizza-type-background" />
+
+        <!-- Buttons -->
+        <HBox layoutX="30.0" layoutY="421.0" prefHeight="35.0" prefWidth="370.0" spacing="10">
+            <Button onAction="#handleCancelButtonClicked" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #d3d3d3; -fx-border-color: grey;" text="Cancel">
+            <HBox.margin>
+               <Insets left="65.0" />
+            </HBox.margin>
+            <font>
+               <Font size="15.0" />
+            </font></Button>
+            <Button onAction="#handleDoneButtonClicked" prefHeight="35.0" prefWidth="100.0" styleClass="configDoneBtn" text="Done">
+            <HBox.margin>
+               <Insets left="40.0" />
+            </HBox.margin>
+            <font>
+               <Font size="15.0" />
+            </font></Button>
+        </HBox>
+        <Label layoutX="29.0" layoutY="277.0" styleClass="label-settings" text="Types of pizzas" />
+        <CheckComboBox fx:id="pizzasComboBox" layoutX="29.0" layoutY="303.0" prefHeight="27.0" prefWidth="371.0" styleClass="pizza-type-background" />
+    </Pane>
+</AnchorPane>
